@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mime;
 using System.Runtime.CompilerServices;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
@@ -27,14 +28,20 @@ namespace Snake_and_Ladder
             return cases.Next(0, 4);
         }
 
+        static int ladder()
+        {
+            Random ladder = new Random();
+            return ladder.Next(1,11);
+        }
 
         static void Main(string[] args)
         {
             int dice = rand();
             Program program = new Program();
-            int Player1 = program.position = 10;
-            Console.WriteLine(Player1);
-            int switch_case = cases();
+            int Player1 = program.position;
+            Console.WriteLine($"Current Player Position {Player1}");
+            //int switch_case = cases();
+            int switch_case = 2;
             switch (switch_case)
             {
                 case 1:
@@ -47,6 +54,9 @@ namespace Snake_and_Ladder
                 {   
                     // This is for ladder
                     Console.WriteLine("This is Case 2");
+                    int go_up_by = ladder();
+                    Console.WriteLine($"Going up by {go_up_by}");
+                    Player1 += go_up_by;
                     break;
                 }
                 case 3:
@@ -56,6 +66,7 @@ namespace Snake_and_Ladder
                     break;
                 }
             }
+            Console.WriteLine($"Player Position = {Player1}");
             Console.ReadLine();
         }
     }
