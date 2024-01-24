@@ -13,7 +13,7 @@ namespace Snake_and_Ladder
     internal class Program
     {
         // UC 1
-        private int position = 10;
+        private int position = 0;
 
         static int rand()
         {
@@ -45,23 +45,19 @@ namespace Snake_and_Ladder
             int dice = rand();
             Program program = new Program();
             int Player1 = program.position;
-            if (Player1 < 0)
-            {
-                Player1 = 0;
-            }
             // UC3
             while (Player1 != 100)
             {
                 Console.WriteLine($"Current Player Position {Player1}");
+                
                 int switch_case = cases();
+                int go_up_by = ladder();
+                int go_down_by = snake();
                 if (Player1 == 100)
                 {
                     Console.WriteLine("User Won!");
                 }
-                if (Player1 < 0)
-                {
-                    Player1 = 0;
-                }
+
                 switch (switch_case)
                 {
                     case 1:
@@ -74,21 +70,30 @@ namespace Snake_and_Ladder
                         {
                             // This is for ladder
                             // Console.WriteLine("This is Case 2");
-                            int go_up_by = ladder();
                             Console.WriteLine($"Going up by {go_up_by}");
                             Player1 += go_up_by;
+                            if (Player1 >= 95 && Player1 <= 100)
+                            {
+                                Console.WriteLine("Player stopped at position 97. Waiting for a 3 on the next roll.");
+                                // Wait until the next dice roll is 
+                                while (rand() < 1 || rand() >= 6) ; 
+                            } 
                             break;
                         }
                     case 3:
                         {
                             // This case if for snake
                             // Console.WriteLine("This is Case 3");
-                            int go_down_by = snake();
                             Console.WriteLine($"Going down by {go_down_by}");
                             Player1 -= go_down_by;
+                            if (Player1 < 0)
+                            {
+                                Player1 = 0;
+                            }
                             break;
                         }
                 }
+
             }
             
             Console.WriteLine($"Player Position = {Player1}");
