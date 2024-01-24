@@ -39,16 +39,19 @@ namespace Snake_and_Ladder
             {
                 case 1:
                 {
+                    // This is for no option case
                     Console.WriteLine("This is Case 1");
                     break;
                 }
                 case 2:
-                {
+                {   
+                    // This is for ladder
                     Console.WriteLine("This is Case 2");
                     break;
                 }
                 case 3:
                 {
+                    // This case if for snake
                     Console.WriteLine("This is Case 3");
                     break;
                 }
