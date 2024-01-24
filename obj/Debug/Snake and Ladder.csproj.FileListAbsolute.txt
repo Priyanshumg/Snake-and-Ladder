@@ -1,0 +1,7 @@
+C:\Users\Dell\Desktop\locobuzz .net training\github\Snake and Ladder\bin\Debug\Snake and Ladder.exe.config
+C:\Users\Dell\Desktop\locobuzz .net training\github\Snake and Ladder\bin\Debug\Snake and Ladder.exe
+C:\Users\Dell\Desktop\locobuzz .net training\github\Snake and Ladder\bin\Debug\Snake and Ladder.pdb
+C:\Users\Dell\Desktop\locobuzz .net training\github\Snake and Ladder\obj\Debug\Snake and Ladder.csproj.AssemblyReference.cache
+C:\Users\Dell\Desktop\locobuzz .net training\github\Snake and Ladder\obj\Debug\Snake and Ladder.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\locobuzz .net training\github\Snake and Ladder\obj\Debug\Snake and Ladder.exe
+C:\Users\Dell\Desktop\locobuzz .net training\github\Snake and Ladder\obj\Debug\Snake and Ladder.pdb
