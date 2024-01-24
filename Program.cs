@@ -34,6 +34,12 @@ namespace Snake_and_Ladder
             return ladder.Next(1,11);
         }
 
+        static int snake()
+        {
+            Random snake = new Random();
+            return snake.Next(1,11);
+        }
+
         static void Main(string[] args)
         {
             int dice = rand();
@@ -63,6 +69,7 @@ namespace Snake_and_Ladder
                 {
                     // This case if for snake
                     Console.WriteLine("This is Case 3");
+                    int go_down_by
                     break;
                 }
             }
