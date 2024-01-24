@@ -46,9 +46,10 @@ namespace Snake_and_Ladder
             Program program = new Program();
             int Player1 = program.position;
             Console.WriteLine($"Current Player Position {Player1}");
-            //int switch_case = cases();
-                int switch_case = 3;
-                switch (switch_case)
+            int switch_case = cases();
+            // int switch_case = 3;
+            // UC3
+            switch (switch_case)
                 {
                     case 1:
                         {
